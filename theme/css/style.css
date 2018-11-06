@@ -24,6 +24,11 @@ h1, h2 {
   font-weight: 600;
 }
 
+.subtitle{
+  font-size: 1.5em;
+  text-align: center;
+}
+
 .latest
 {-
   padding: 10px 10px;
