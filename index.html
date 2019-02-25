@@ -119,7 +119,7 @@
               <!--Grid row-->
               <div class="row">
                 <div class="col-xl-12 col-md-12 col-12 text-md-right">
-                  <form id="cvForm" method="GET" action="files/cv.pdf" target="_blank">
+                  <form id="cvForm" method="GET" action="theme/files/cv.pdf" target="_blank">
                     <button id="cvButton" class="btn btn-blue-grey" type="submit">Get my CV!</button>
                   </form>
                 </div>
@@ -152,10 +152,10 @@
 
             <!-- Grid row -->
             <div class="row text-left">
-              <div class="col-lg-4 col-md-3 mx-lg-0 my-3">
+              <div class="col-lg-4 col-md-5 mx-lg-0 my-3">
                 <img src="theme/img/ai.jpeg" class="img-fluid rounded z-depth-1" alt="Neural network graph">
               </div>
-              <div class="col-lg-8 col-md-9 mx-lg-0 my-3">
+              <div class="col-lg-8 col-md-7 mx-lg-0 my-3">
                 <h4 class="font-weight-bold my-3 text-center">Machine Learning</h4>
                 <p>It was the first thing that I have found really fascinating.
                   Since then I have gone through famous Andrew Ng's Machine Learning <a
@@ -167,6 +167,10 @@
                   some point I will be able to work on some fun projects such as creating software for autonomous
                   vehicles.
                 </p>
+              </div>
+            </div>
+            <div class="row text-left my-3">
+              <div class="col">
                 <div class="collapse" id="moreML">
                   <p>Some of the projects that I have made to further my knowledge are:</p>
                   <ul class="fa-ul text-left">
@@ -201,8 +205,12 @@
                     </li>
                   </ul>
                 </div>
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-md-2 text-right">
                 <p>
-                  <a class="btn btn-link text-left px-0 mx-0" data-toggle="collapse" href="#moreML" role="button"
+                  <a class="btn btn-link px-0 mx-0" data-toggle="collapse" href="#moreML" role="button"
                     aria-expanded="false" aria-controls="collapse">
                     Read More
                   </a>
@@ -213,67 +221,82 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row text-left my-5" style="background-color: #fff">
-              <div class="col-lg-4 col-md-9 order-md-2 mx-lg-0 my-2">
-                <img src="theme/img/web.jpg" class="img-fluid rounded z-depth-1" alt="Web development representation">
-              </div>
-              <div class="col-lg-8 col-md-3 order-md-1 mx-lg-0 my-2">
-                <h4 class="font-weight-bold my-3 text-center">Web development</h4>
-                <p>It is a topic that I am learning currently. I have become interested in creating web applications
-                  after one of the courses at my university. It convinced me that the ability to create
-                  software capable of using various web technologies is very important and that not knowing at least
-                  basics would be a big mistake. Thanks to that I was able to see yet another fun side of software
-                  development
-                  and also decided to steer my nearest career towards it. Right now I would love to further my knowledge
-                  in back-end development and making fast and reliable server-side solutions.
-                </p>
-                <div class="collapse" id="moreWebDev">
-                  <p>Some of my projects related to that topic:</p>
-                  <ul class="fa-ul text-left">
-                    <li><span class="fa-li"><i class="fab fa-github-square fa-lg"></i></span><a
-                        href="https://github.com/lampo100/p2p-client">Botnet P2P</a> - As a part of a team during one of
-                      my courses, I have
-                      created in Python a p2p client. Thanks to asyncio it works completly asynchronously, which makes
-                      it
-                      capable of handling many connections at the same time. Originally it was supposed to be capable
-                      of being bot network's node (meaning that it was supposed to annonymously infect other test
-                      machines, etc.), but because of a deadline, we were forced to leave it as a simple p2p node
-                      capable
-                      of
-                      transfering files and sending commands to other machines.
-                    </li>
-                    <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span>Rufus - A simple time management
-                      application. I have begun working on it in order to learn Django and because to make using my
-                      various
-                      time management techniques faster and convenient. I hope to finish this project soon and let me as
-                      well as others use it to make better use of time spend on various projects and other tasks.
-                    </li>
-                    <li><span class="fa-li"><i class="fas fa-globe"></i></span><a href="https://kaminskidev.com">This
-                        site
-                        :)</a> - The simplest and in some way the most fun part of web development
-                      is after all website creation. This homepage allows me to actually use all the new things that I
-                      am
-                      learning and in the future I plan to use it as a sort of a blog and share with others
-                      all the things that I find interesting.
-                    </li>
-                  </ul>
+            <div class="container white my-5">
+              <div class="row text-left">
+                <div class="col-lg-4 col-md-5 order-md-2 mx-lg-0 my-3">
+                  <img src="theme/img/web.jpg" class="img-fluid rounded z-depth-1" alt="Web development representation">
                 </div>
-                <a class="btn btn-link text-left px-0 mx-0" data-toggle="collapse" href="#moreWebDev" role="button"
-                  aria-expanded="false" aria-controls="collapse">
-                  Read More
-                </a>
-                <i id="softwareArchitecture"></i>
+                <div class="col-lg-8 col-md-7 order-md-1 mx-lg-0 my-3">
+                  <h4 class="font-weight-bold my-3 text-center">Web development</h4>
+                  <p>It is a topic that I am learning currently. I have become interested in creating web applications
+                    after one of the courses at my university. It convinced me that the ability to create
+                    software capable of using various web technologies is very important and that not knowing at least
+                    basics would be a big mistake. Thanks to that I was able to see yet another fun side of software
+                    development
+                    and also decided to steer my nearest career towards it. Right now I would love to further my
+                    knowledge
+                    in back-end development and making fast and reliable server-side solutions.
+                  </p>
+                </div>
+              </div>
+              <div class="row text-left">
+                <div class="col">
+                  <div class="collapse" id="moreWebDev">
+                    <p>Some of my projects related to that topic:</p>
+                    <ul class="fa-ul text-left">
+                      <li><span class="fa-li"><i class="fab fa-github-square fa-lg"></i></span><a
+                          href="https://github.com/lampo100/p2p-client">Botnet P2P</a> - As a part of a team during one
+                        of
+                        my courses, I have
+                        created in Python a p2p client. Thanks to asyncio it works completly asynchronously, which makes
+                        it
+                        capable of handling many connections at the same time. Originally it was supposed to be capable
+                        of being bot network's node (meaning that it was supposed to annonymously infect other test
+                        machines, etc.), but because of a deadline, we were forced to leave it as a simple p2p node
+                        capable
+                        of
+                        transfering files and sending commands to other machines.
+                      </li>
+                      <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span>Rufus - A simple time management
+                        application. I have begun working on it in order to learn Django and because to make using my
+                        various
+                        time management techniques faster and convenient. I hope to finish this project soon and let me
+                        as
+                        well as others use it to make better use of time spend on various projects and other tasks.
+                      </li>
+                      <li><span class="fa-li"><i class="fas fa-globe"></i></span><a href="https://kaminskidev.com">This
+                          site
+                          :)</a> - The simplest and in some way the most fun part of web development
+                        is after all website creation. This homepage allows me to actually use all the new things that I
+                        am
+                        learning and in the future I plan to use it as a sort of a blog and share with others
+                        all the things that I find interesting.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-start text-left">
+                <div class="col-md-2">
+                  <p>
+                    <a class="btn btn-link px-0 mx-0" data-toggle="collapse" href="#moreWebDev" role="button"
+                      aria-expanded="false" aria-controls="collapse">
+                      Read More
+                    </a>
+                  </p>
+                  <i id="softwareArchitecture"></i>
+                </div>
               </div>
             </div>
             <!-- Grid row -->
 
             <!-- Grid row -->
             <div class="row text-left">
-              <div class="col-lg-4 col-md-9 mx-lg-0">
+              <div class="col-lg-4 col-md-6 mx-lg-0">
                 <img src="theme/img/architecture.svg" class="img-fluid rounded z-depth-1"
                   alt="Web development representation">
               </div>
-              <div class="col-lg-8 col-md-4 mx-lg-0">
+              <div class="col-lg-8 col-md-6 mx-lg-0">
                 <h4 class="font-weight-bold my-3 text-center">Software Architecture</h4>
                 <p>After working on many group assignments and after creating many programs by myself, I have started to
                   appreciate just how much a well thought-out project structure can help in the development.
