@@ -4,7 +4,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: master
       - deploy:
           requires:
             - build
@@ -32,17 +35,28 @@ jobs:
       - checkout
       - attach_workspace:
           at: docs
+      - add_ssh_keys:
+          fingerprints:
+            - "aa:46:18:47:7b:8b:63:82:bf:12:08:81:73:4e:4b:99"
       - run:
           name: Disable jekyll builds
           command: touch docs/.nojekyll
       - run:
           name: Custom Domain
-          command: echo "www.kaminskidev.com" > docs/CNAME
+          command: echo "www.kaminskidev.com" > public/CNAME
       - run:
           name: Push built page to master branch
           command: |
+            cd docs
+            git init
+            git remote set-url origin git@github.com:perkam/homepage.git
+            git checkout gh-pages
+            git stash
+            git pull
             git config user.email "lampo100@gmail.com"
             git config user.name "perkam"
-            git add docs/**/*
+            rm -rf .
+            git stash pop
+            git add *
             git commit -m "Push new page version"
             git push
