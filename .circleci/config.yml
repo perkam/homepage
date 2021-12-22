@@ -37,7 +37,7 @@ jobs:
           command: touch docs/.nojekyll
       - run:
           name: Custom Domain
-          command: echo "www.kaminskidev.com" > public/CNAME
+          command: echo "www.kaminskidev.com" > docs/CNAME
       - run:
           name: Push built page to master branch
           command: |
