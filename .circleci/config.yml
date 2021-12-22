@@ -48,6 +48,7 @@ jobs:
           name: Push built page to master branch
           command: |
             cd docs
+            ls
             git init
             git remote add origin git@github.com:perkam/homepage.git
             git fetch --all
