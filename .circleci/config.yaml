@@ -1,0 +1,48 @@
+version: 2
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+jobs:
+  build:
+    docker:
+      - image: klakegg/hugo:latest
+    working_directory: ~/blog
+    environment:
+      HUGO_BUILD_DIR: docs
+    steps:
+      - checkout
+      - run: HUGO_ENV=production hugo -F -v -d $HUGO_BUILD_DIR
+      - persist_to_workspace:
+          root: docs
+          paths: .
+  deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs
+      - run:
+          name: Disable jekyll builds
+          command: touch docs/.nojekyll
+      - run:
+          name: Custom Domain
+          command: echo "www.kaminskidev.com" > public/CNAME
+      - run:
+          name: Push built page to master branch
+          command: |
+            git config user.email "lampo100@gmail.com"
+            git config user.name "perkam"
+            git add docs/**/*
+            git commit -m "Push new page version"
+            git push
