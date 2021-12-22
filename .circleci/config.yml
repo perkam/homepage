@@ -59,7 +59,7 @@ jobs:
             git checkout gh-pages
             echo "Pull"
             git pull
-            rm -rf .
+            rm -rf *
             git clean -fxd
             mv -f ../public/* .
             git add *
