@@ -21,12 +21,12 @@ jobs:
       - image: klakegg/hugo:latest
     working_directory: ~/blog
     environment:
-      HUGO_BUILD_DIR: docs
+      HUGO_BUILD_DIR: public
     steps:
       - checkout
       - run: HUGO_ENV=production hugo -F -v -d $HUGO_BUILD_DIR
       - persist_to_workspace:
-          root: docs
+          root: public
           paths: .
   deploy:
     docker:
@@ -34,37 +34,32 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: docs
+          at: public
       - add_ssh_keys:
           fingerprints:
             - "aa:46:18:47:7b:8b:63:82:bf:12:08:81:73:4e:4b:99"
       - run:
           name: Disable jekyll builds
-          command: touch docs/.nojekyll
+          command: touch public/.nojekyll
       - run:
           name: Custom Domain
-          command: echo "www.kaminskidev.com" > docs/CNAME
+          command: echo "www.kaminskidev.com" > public/CNAME
       - run:
           name: Push built page to master branch
           command: |
-            cd docs
-            ls
+            mkdir gh-pages
+            cd gh-pages
             git init
             git config user.email "lampo100@gmail.com"
             git config user.name "perkam"
             git remote add origin git@github.com:perkam/homepage.git
             echo "Fetch"
             git fetch --all
-            echo "Empty commit"
-            git commit -m "Empty"
-            echo "Stash"
-            git stash
             echo "checkout"
             git checkout gh-pages
             echo "Pull"
-            git pull --hard
-            rm -rf .
-            git stash pop
+            git pull
+            mv -f ../public/* .
             git add *
             git commit -m "Push new page version"
             git push
