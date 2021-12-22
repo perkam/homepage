@@ -50,6 +50,7 @@ jobs:
             cd docs
             git init
             git remote add origin git@github.com:perkam/homepage.git
+            git fetch --all
             git checkout gh-pages
             git stash
             git pull
