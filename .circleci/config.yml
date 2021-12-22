@@ -49,7 +49,7 @@ jobs:
           command: |
             cd docs
             git init
-            git remote set-url origin git@github.com:perkam/homepage.git
+            git remote add origin git@github.com:perkam/homepage.git
             git checkout gh-pages
             git stash
             git pull
