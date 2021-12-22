@@ -53,12 +53,14 @@ jobs:
             git remote add origin git@github.com:perkam/homepage.git
             echo "Fetch"
             git fetch --all
+            echo "Empty commit"
+            git commit -m "Empty"
             echo "Stash"
             git stash
             echo "checkout"
             git checkout gh-pages
             echo "Pull"
-            git pull
+            git pull --hard
             git config user.email "lampo100@gmail.com"
             git config user.name "perkam"
             rm -rf .
