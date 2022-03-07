@@ -1,9 +1,77 @@
 baseURL = 'https://www.kaminskidev.com/'
-title = "Kacper Kamiński Homepage"
-defaultContentLanguage = "en"
-languageCode = "en"
+languageCode = 'en-us'
+title = 'Kacper Kamiński Homepage'
+theme = "cactus"
+copyright = "Kacper Kamiński"
 
-# Change the default theme to be use when building the site with Hugo
-theme = "hugo-xmin"
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-custom_css = ["css/custom.css"]
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+[params]
+  mainSectionTitle = "Articles"
+  colortheme = "white" # dark, light, white, or classic
+  rss = true # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+  showAllPostsArchive = false # default
+
+  # Home page settings
+  description = "Work in progress - migrating to [Hugo](https://gohugo.io/).  \n![Mining dwarf](/images/mining_dwarf.gif)"
+  mainSection = "posts" # your main section
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  showWritingsList = false
+  showProjectsList = false # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+  # CV
+  cvUrl = "![my CV](/images/lucy.png)"
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+  showReadTime = true # default
+
+  [params.comments]
+    enabled = true # default
+    engine = "cactus_comments" # only disqus, utterances, and cactus_comments is supported
+    [params.comments.utterances]
+      repo = "<github_username>/<github_reponame>"
+      label = "hugo-site-name" # you can use however you want to label your name in your repo's issues
+      theme = "github-light"
+    [params.comments.cactuscomments]
+      siteName = "your_cactus_comments_sitename" # see https://cactus.chat/ on how to register your site name
+      #serverUrl = "" # Defaults to https://matrix.cactus.chat:8448 (Cactus Chat public server)
+      #serverName = "" # Defaults to cactus.chat
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/perkam"
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/kaminski-kacper/"
+  [[params.social]]
+    name = "email"
+    link = "kacper@kaminskidev.com"  # no need for "mailto:" in the head
