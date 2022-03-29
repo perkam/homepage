@@ -8,6 +8,7 @@ body {
     color: #222;
     font: normal 14px/24px "Merriweather", Georgia, serif;
     background: #e8e6e3;
+    background-image: url("images/background.png");
 }
 
 nav {
