@@ -1,4 +1,11 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" />
+</head>
 
 <main>
     <div class="page sidebar">
@@ -8,4 +15,11 @@
     </div>
 </main>
 
-{{ partial "footer.html" . }}
+<footer>
+    {{ with .Site.Params.footer }}
+    <hr/>
+    {{ replace . "{Year}" now.Year | markdownify}}
+    {{ end }}
+</footer>
+</body>
+</html>
