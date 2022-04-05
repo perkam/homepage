@@ -1,0 +1,29 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "- Easy to update - adding new article should require adding new markdown page in a directory. - Pretty code snippets with syntax highlight. - Comments like these: ![./docs/img.png](img.png) - Easy to find via search browser - good SEO. - Permanent About Me page. - Tags and ability to display articles with some tag - Good mobile experience - Readers can share articles - Articles can be easily shared on social media - RSS - I can embed things like youtube videos etc. ## Anti-goals - Not a documentation page - Only about me will be used as promotional page - No users comments - contact through social media/email only",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perkam/homepage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perkam/homepage/issues"
+  },
+  "homepage": "https://github.com/perkam/homepage#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.23"
+  }
+}
