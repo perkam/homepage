@@ -15,3 +15,7 @@
 - Not a documentation page
 - Only about me will be used as promotional page
 - No users comments - contact through social media/email only
+
+Run `npm run dev`
+and then
+`hugo serve -D`

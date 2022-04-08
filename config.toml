@@ -3,7 +3,4 @@ title = "Kacper Kamiński Homepage"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-# Change the default theme to be use when building the site with Hugo
-theme = "pushbear"
-
 custom_css = ["css/custom.css"]
