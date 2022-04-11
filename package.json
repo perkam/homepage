@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./static/css/tailwind.css -o ./static/main.css -w",
-    "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./static/css/tailwind.css -o ./static/main.css --minify"
+    "dev": "set NODE_ENV=development && npx tailwindcss -i ./static/css/tailwind.css -o ./static/main.css -w",
+    "build": "set NODE_ENV=production && npx tailwindcss -i ./static/css/tailwind.css -o ./static/main.css --minify"
   },
   "dependencies": {
     "tailwindcss": "^3.0.5"

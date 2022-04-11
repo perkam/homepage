@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{{ partial "head.html" }}
-</head>
-<body>
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{{ define "main" }}
   <div class="container mx-auto pt-5 md:pt-14 pb-14 px-5 main-content">
     <div class="mb-10">
       {{ partial "navbar.html" }}
@@ -17,11 +10,11 @@
         </div>
         <h1 class="text-center font-bold text-2xl mb-1">Kacper Kamiński</h1>
         <div class="text-gray-500 text-sm">
-          <a class="no-underline text-gray-600" href="https://github.com/perkam" rel="noopener" alt="GitHub">GitHub</a>
+          <a class="hover:underline text-gray-600" href="https://github.com/perkam" rel="noopener" alt="GitHub">GitHub</a>
           <span class="mx-1 font-extrabold">·</span>
-          <a class="no-underline text-gray-600" href="https://pl.linkedin.com/in/kaminski-kacper" rel="noopener" alt="Linkedin">Linkedin</a>
+          <a class="hover:underline text-gray-600" href="https://pl.linkedin.com/in/kaminski-kacper" rel="noopener" alt="Linkedin">Linkedin</a>
           <span class="mx-1 font-extrabold">·</span>
-          <a class="no-underline text-gray-600" href="mailto: kacper@kaminskidev.com" rel="noopener" alt="email">Email</a>
+          <a class="hover:underline text-gray-600" href="mailto: kacper@kaminskidev.com" rel="noopener" alt="email">Email</a>
         </div>
       </div>
     </div>
@@ -29,8 +22,4 @@
     <a href="https://equinix.com" rel="noopener" class="underline">Equinix</a>
     </p>
   </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+{{ end }}
