@@ -1,9 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-author: ""
-type: ""
+summary: ""
+author: "Kacper Kamiński"
 date: {{ .Date }}
-subtitle: ""
-image: ""
 tags: []
 ---

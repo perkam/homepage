@@ -1,25 +1,23 @@
 {{ define "main" }}
-  <div class="container mx-auto pt-5 md:pt-14 pb-14 px-5 main-content">
     <div class="mb-10">
-      {{ partial "navbar.html" }}
-    </div>
-    <div class="mb-10">
-      <div class="flex flex-col items-center">
-        <div class="mb-1">
-          <img class="rounded-full" src="/images/photo.jpg" alt="Profile picture" width="140" height="140">
+        <div class="flex flex-col items-center">
+            <div class="mb-1">
+                <img class="rounded-full" src="/images/photo.jpg" alt="Profile picture" width="140" height="140">
+            </div>
+            <h1 class="text-center font-bold text-2xl mb-1">Kacper Kamiński</h1>
+            <div class="text-gray-500 text-sm">
+                <a class="hover:underline text-gray-600" href="https://github.com/perkam" rel="noopener" alt="GitHub">GitHub</a>
+                <span class="mx-1 font-extrabold">·</span>
+                <a class="hover:underline text-gray-600" href="https://pl.linkedin.com/in/kaminski-kacper"
+                   rel="noopener" alt="Linkedin">Linkedin</a>
+                <span class="mx-1 font-extrabold">·</span>
+                <a class="hover:underline text-gray-600" href="mailto: kacper@kaminskidev.com" rel="noopener"
+                   alt="email">Email</a>
+            </div>
         </div>
-        <h1 class="text-center font-bold text-2xl mb-1">Kacper Kamiński</h1>
-        <div class="text-gray-500 text-sm">
-          <a class="hover:underline text-gray-600" href="https://github.com/perkam" rel="noopener" alt="GitHub">GitHub</a>
-          <span class="mx-1 font-extrabold">·</span>
-          <a class="hover:underline text-gray-600" href="https://pl.linkedin.com/in/kaminski-kacper" rel="noopener" alt="Linkedin">Linkedin</a>
-          <span class="mx-1 font-extrabold">·</span>
-          <a class="hover:underline text-gray-600" href="mailto: kacper@kaminskidev.com" rel="noopener" alt="email">Email</a>
-        </div>
-      </div>
     </div>
     <p class="text-center w-full mb-4">Python Developer with DevOps at
-    <a href="https://equinix.com" rel="noopener" class="underline">Equinix</a>
+        <a href="https://equinix.com" rel="noopener" class="underline">Equinix</a>
     </p>
-  </div>
+    <p class="text-center w-full mb-4">Grab my CV <a href="/pdfs/CV_english_2022_04_16.pdf" rel="noopener" class="underline">here</a></p>
 {{ end }}

@@ -16,6 +16,6 @@
 - Only about me will be used as promotional page
 - No users comments - contact through social media/email only
 
-Run `npm run dev`
-and then
-`hugo serve -D`
+## Local development
+
+Run `make serve`
