@@ -1,14 +1,17 @@
 {{ define "main" }}
 <div>
     <ul>
-    {{ range .Pages }}
+        {{ range .Pages }}
         <li class="list-none mb-9">
             <a href="{{.Permalink}}" class="inline-flex">
                 <h3 class="text-3xl font-bold underline mb-1">{{.Title}}</h3>
             </a>
             <p>{{.Summary}}</p>
         </li>
-    {{ end }}
+        {{ end }}
+        {{ if eq (len .Pages) 0}}
+            <h2 class="text-center text-2xl">Nothing to see here yet :)</h2>
+        {{ end }}
     </ul>
 </div>
 {{ end }}
