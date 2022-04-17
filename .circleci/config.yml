@@ -4,10 +4,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: master
+      - build
       - deploy:
           requires:
             - build
@@ -24,7 +21,12 @@ jobs:
       HUGO_BUILD_DIR: public
     steps:
       - checkout
-      - run: HUGO_ENV=production hugo -F -v -d $HUGO_BUILD_DIR
+      - run:
+          name: Build page
+          command: |
+            npm install -y
+            npm run build
+            HUGO_ENV=production hugo -F -v -d $HUGO_BUILD_DIR
       - persist_to_workspace:
           root: public
           paths: .
