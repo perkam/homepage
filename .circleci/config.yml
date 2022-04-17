@@ -1,5 +1,4 @@
 version: 2.1
-
 workflows:
   version: 2
   build:
@@ -55,7 +54,7 @@ jobs:
           at: public
       - add_ssh_keys:
           fingerprints:
-            - "aa:46:18:47:7b:8b:63:82:bf:12:08:81:73:4e:4b:99"
+            - "91:7e:a3:a8:c8:58:f1:27:3c:89:d7:8f:b6:59:75:09"
       - run:
           name: Disable jekyll builds
           command: touch public/.nojekyll
