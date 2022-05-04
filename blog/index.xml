@@ -6,6 +6,16 @@
     <description>Recent content in My projects on Kacper Kamiński Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Kacper Kamiński</copyright><atom:link href="https://www.kaminskidev.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Kacper Kamiński</copyright>
+    <lastBuildDate>Wed, 04 May 2022 21:00:21 +0000</lastBuildDate><atom:link href="https://www.kaminskidev.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test article</title>
+      <link>https://www.kaminskidev.com/blog/2022-05-04-test-article/</link>
+      <pubDate>Wed, 04 May 2022 21:00:21 +0000</pubDate>
+      
+      <guid>https://www.kaminskidev.com/blog/2022-05-04-test-article/</guid>
+      <description>Test body</description>
+    </item>
+    
   </channel>
 </rss>
