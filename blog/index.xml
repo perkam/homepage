@@ -6,18 +6,6 @@
     <description>Recent content in My projects on Kacper Kamiński Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Kacper Kamiński</copyright>
-    <lastBuildDate>Thu, 05 May 2022 16:06:55 +0000</lastBuildDate><atom:link href="https://www.kaminskidev.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test article</title>
-      <link>https://www.kaminskidev.com/blog/2022-05-05-test-article/</link>
-      <pubDate>Thu, 05 May 2022 16:06:55 +0000</pubDate>
-      
-      <guid>https://www.kaminskidev.com/blog/2022-05-05-test-article/</guid>
-      <description>Test article here Here is my dog:
-And here is some random AI stock image:
-And here is some photo that I decided to upload right now:</description>
-    </item>
-    
+    <copyright>Kacper Kamiński</copyright><atom:link href="https://www.kaminskidev.com/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
