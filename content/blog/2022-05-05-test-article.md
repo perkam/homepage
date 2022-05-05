@@ -7,11 +7,11 @@ description: Description is required it seems
 
 Here is my dog:
 
-![Lucy](/static/images/lucy.png "This is my dog")
+![Lucy](images/lucy.png "This is my dog")
 
 And here is some random AI stock image:
 
-![ai stock image](/static/images/ai.jpeg "ai stock image")
+![ai stock image](images/ai.jpeg "ai stock image")
 
 And here is some photo that I decided to upload right now:
 
