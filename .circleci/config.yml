@@ -42,10 +42,7 @@ jobs:
             npm install -y
             npm run build
 #            HUGO_ENV=production hugo -F -v -d $HUGO_BUILD_DIR
-      - hugo/build:
-          destination: $HUGO_BUILD_DIR
-          hugo-extra-flags: '-v -F'
-          hugo-env: production
+      - hugo/build
       - persist_to_workspace:
           root: public
           paths: .
