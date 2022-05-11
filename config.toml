@@ -1,7 +1,6 @@
 baseURL = 'https://www.kaminskidev.com/'
 languageCode = 'en-us'
 title = 'Kacper Kamiński Homepage'
-theme = "cactus"
 copyright = "Kacper Kamiński"
 
 custom_css = ["css/custom.css"]
