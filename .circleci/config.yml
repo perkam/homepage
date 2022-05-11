@@ -87,4 +87,4 @@ jobs:
             mv -f ../public/* .
             git add *
             git commit -m "Push new page version"
-            git push
+            git push --force
