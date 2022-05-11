@@ -86,5 +86,5 @@ jobs:
             git clean -fxd
             mv -f ../public/* .
             git add *
-            git commit -m "Push new page version"
-            git push --force
+            git commit --allow-empty -m "Push new page version"
+            git push
