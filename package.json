@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "set NODE_ENV=development && npx tailwindcss -i ./static/css/tailwind.css -o ./static/main.css -w",
-    "build": "set NODE_ENV=production && npx tailwindcss -i ./static/css/tailwind.css -o ./static/main.css --minify"
+    "build": "set NODE_ENV=production && npx tailwindcss -i ./static/css/tailwind.css -o ./static/main.css --minify && HUGO_ENV=production hugo -F -v -d public && mv ./static/main.css ./public/main.css"
   },
   "dependencies": {
     "tailwindcss": "^3.0.5"
