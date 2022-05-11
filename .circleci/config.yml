@@ -28,7 +28,7 @@ jobs:
           name: Build css
           command: |
             npm install -y
-            npm run build
+            npm run css
       - persist_to_workspace:
           root: .
           paths: static/main.css
